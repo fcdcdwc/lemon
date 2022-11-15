@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--父级依赖-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.1</version>
+    </parent>
+    <!--maven模型版本，4.0.0-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--项目所属组织-->
+    <groupId>com.fcdcdwc.lemon</groupId>
+    <!--项目模块名称-->
+    <artifactId>lemon</artifactId>
+    <!--项目版本-->
+    <version>1.0.0.RELEASE</version>
+
+    <!--打包类型-->
+    <packaging>pom</packaging>
+    <!--项目模块-->
+    <modules>
+        <module>lemon-common</module>
+        <module>lemon-back</module>
+    </modules>
+
+    <!--全局变量-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <hutool.version>5.8.4</hutool.version>
+        <swagger.version>3.0.0</swagger.version>
+        <mysql.version>8.0.20</mysql.version>
+        <mybatisplus.version>3.5.2</mybatisplus.version>
+        <mybatisx.version>3.5.0</mybatisx.version>
+        <lombok.version>1.18.24</lombok.version>
+        <easyexcel.version>3.1.1</easyexcel.version>
+    </properties>
+
+    <!--项目依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <!--Hutool JAVA工具类库,文档地址：https://www.hutool.cn/ -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!--Swagger-UI API文档生产工具,文档地址：https://swagger.io/ -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!--Mysql数据库驱动 -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--MyBatis-Plus 持久层框架,文档地址：https://baomidou.com/  -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatisplus.version}</version>
+            </dependency>
+            <!-- MyBatis-Plus 多数据源配置 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${mybatisx.version}</version>
+            </dependency>
+            <!--Lombok JAVA工具类库,自动插入到编辑器和构建工具中,文档地址：https://projectlombok.org/ -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--EasyExcel JAVA解析Excel工具, 文档地址:https://easyexcel.opensource.alibaba.com/-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <!--项目的构建信息-->
+    <build>
+        <plugins>
+            <!-- 指定编译插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- 设置编译插件信息 -->
+                <configuration>
+                    <!-- 编译时的jdk版本-->
+                    <source>1.8</source>
+                    <!-- 运行时的jdk版本-->
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

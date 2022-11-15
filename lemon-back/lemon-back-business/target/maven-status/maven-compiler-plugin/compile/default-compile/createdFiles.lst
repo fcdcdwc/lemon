@@ -1,0 +1,5 @@
+com\fcdcdwc\lemon\back\business\mapper\AreaMapper.class
+com\fcdcdwc\lemon\back\business\mapper\UserMapper.class
+com\fcdcdwc\lemon\back\business\service\UserService.class
+com\fcdcdwc\lemon\back\business\service\AreaService.class
+com\fcdcdwc\lemon\back\business\service\impl\AreaServiceImpl.class
