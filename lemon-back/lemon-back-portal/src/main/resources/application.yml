@@ -1,6 +1,6 @@
 server:
   # 配置服务端口
-  port: 8000
+  port: 8080
 
 spring:
   # 配置匹配策略
@@ -27,7 +27,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.20.134:3306/mybatis_plus?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
-    password: fcdcdwc
+    password: 123456
   security:
     user:
       name: admin

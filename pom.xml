@@ -88,25 +88,4 @@
         </dependencies>
     </dependencyManagement>
 
-
-    <!--项目的构建信息-->
-    <build>
-        <plugins>
-            <!-- 指定编译插件 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <!-- 设置编译插件信息 -->
-                <configuration>
-                    <!-- 编译时的jdk版本-->
-                    <source>1.8</source>
-                    <!-- 运行时的jdk版本-->
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
-
 </project>

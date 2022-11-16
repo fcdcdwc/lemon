@@ -12,6 +12,27 @@
     <artifactId>lemon-back-portal</artifactId>
     <version>1.0.0.RELEASE</version>
 
+    <build>
+        <finalName>lemonBackPortal</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.2.7.RELEASE</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.fcdcdwc.lemon.back.LemonBackRun</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
         <dependency>
             <groupId>com.fcdcdwc.lemon</groupId>
@@ -19,5 +40,4 @@
             <version>1.0.0.RELEASE</version>
         </dependency>
     </dependencies>
-
 </project>

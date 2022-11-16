@@ -17,6 +17,9 @@ import com.fcdcdwc.lemon.back.pojo.enums.SexEnum;
 import com.fcdcdwc.lemon.common.exception.Asserts;
 import com.fcdcdwc.lemon.common.exception.BusinessException;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,11 +56,19 @@ public class TestController extends BaseResource {
     private AreaMapper areaMapper;
 
     @GetMapping(value = "/getUser")
+    @ApiOperation(value = "根据用户ID获取用户")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "用户id", required = true, dataType = "long", paramType = "query")}
+    )
     public User getUser(Long id) {
         return userMapper.selectById(id);
     }
 
     @GetMapping(value = "/getAreaList")
+    @ApiOperation(value = "根据用户ID获取地域列表")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "地域id", required = true, dataType = "string", paramType = "query")}
+    )
     public List<Area> getAreaList(String id) {
         LambdaQueryWrapper<Area> objectLambdaQueryWrapper = new LambdaQueryWrapper<>();
         QueryWrapper<Area> objectQueryWrapper = new QueryWrapper<>();

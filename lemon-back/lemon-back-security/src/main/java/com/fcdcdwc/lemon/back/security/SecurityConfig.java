@@ -1,3 +1,4 @@
+/*
 package com.fcdcdwc.lemon.back.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +13,18 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;PasswordEncoder
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+*/
 /**
  * @author liyandi
  * @program: lemon
  * @description: SpringSecurity配置类
  * @date 2022-07-20 14:12:59
- */
+ *//*
+
 @Configuration
 @EnableWebSecurity
 // 启用方法级别的认证，prePostEnabled：boolean 默认是false，true表示可以使用@PreAuthorize注解 和 @PostAuthorize
@@ -51,3 +54,4 @@ public class SecurityConfig {
     }
 
 }
+*/
