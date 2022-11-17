@@ -1,8 +1,26 @@
 server:
   # 配置服务端口
-  port: 8080
+  port: 8001
 
 spring:
+  # redis配置
+  redis:
+    client-type: lettuce
+    port: 6379
+    host: 192.168.20.134
+    database: 1
+    password:
+    timeout: 1000
+    lettuce:
+      pool:
+        # 最大存活的连接数
+        max-active: 8
+        # 等待超时时间 负数无限等待
+        max-wait: -1ms
+        # 最小连接数
+        min-idle: 0
+        # 最大连接数
+        max-idle: 8
   # 配置匹配策略
   mvc:
     pathmatch:
@@ -26,6 +44,7 @@ spring:
     # 配置连接数据库的信息
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.20.134:3306/mybatis_plus?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+#    url: jdbc:mysql://mysql:3306/mybatis_plus?useUnicode=true&characterEncoding=utf-8&useSSL=false:
     username: root
     password: 123456
   security:
